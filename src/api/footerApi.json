@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "CiLocationOn",
+    "title": "Find us",
+    "details": "Chirala, AP"
+  },
+  {
+    "icon": "IoIosCall",
+    "title": "Call us",
+    "details": "9876543211"
+  },
+  {
+    "icon": "CiMail",
+    "title": "Mail us",
+    "details": "thisisram@gmail.com"
+  }
+]
