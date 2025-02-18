@@ -14,7 +14,7 @@ export const Header = () => {
           <div className="grid navbar-grid">
             <div className="Logo">
               <NavLink to="/">
-                <h1>WorldAtlas</h1>
+                <h1>RAMPAGE WORLD</h1>
               </NavLink>
             </div>
             <div className="menu-container">

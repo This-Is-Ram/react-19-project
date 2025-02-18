@@ -1,9 +1,10 @@
 import { useEffect, useState, useTransition } from "react";
-import { NavLink, useParams } from "react-router-dom";
+import { NavLink, useNavigate, useParams } from "react-router-dom";
 import { Loaderrr } from "./Loader";
 import { gettingCountryData } from "../../api/axiosOperations/apiOperations";
 
 export const CountryDetails = () => {
+  const navigate = useNavigate();
   const { id } = useParams(); // getting URL parameters
   console.log(id); // particular country  ( ex:- id ==> india )
   const [isPending, startTransition] = useTransition();
@@ -22,6 +23,12 @@ export const CountryDetails = () => {
   if (isPending) {
     return <Loaderrr />;
   }
+
+  // handle back
+  const handleBack = () => {
+    navigate(-1);
+  };
+
   return (
     <section className="card country-details-card container">
       <div className="container-card bg-green-box">
@@ -78,9 +85,9 @@ export const CountryDetails = () => {
           </div>
         )}
         <div className="country-card-backBtn">
-          <NavLink to="/country" className="backBtn">
-            <button>Go Back</button>
-          </NavLink>
+          <button className="backBtn" onClick={handleBack}>
+            Go Back
+          </button>
         </div>
       </div>
     </section>
