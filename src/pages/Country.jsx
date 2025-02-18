@@ -23,6 +23,8 @@ export const Country = () => {
     return <Loaderrr />;
   }
 
+  // ! main logic for entire Project
+
   const searchCountry = (curCountry) => {
     if (search) {
       return curCountry.name.common

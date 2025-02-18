@@ -1,5 +1,7 @@
 export const Contact = () => {
   const handleFormSubmit = (formdata) => {
+    console.log(formdata);
+
     const data = Object.fromEntries(formdata.entries());
     console.log(data); //todo   " Instead of logging to the console, Here we can write code to send the data to the backend."
   };

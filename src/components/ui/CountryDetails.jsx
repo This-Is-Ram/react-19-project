@@ -4,8 +4,8 @@ import { Loaderrr } from "./Loader";
 import { gettingCountryData } from "../../api/axiosOperations/apiOperations";
 
 export const CountryDetails = () => {
-  const { id } = useParams();
-  console.log(id);
+  const { id } = useParams(); // getting URL parameters
+  console.log(id); // particular country  ( ex:- id ==> india )
   const [isPending, startTransition] = useTransition();
   const [indCountry, setIndCountry] = useState();
 
